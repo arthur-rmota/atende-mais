@@ -46,16 +46,20 @@ body {
   }
 }
 
+/* PHONES SHOWCASE */
 .phones-showcase {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   gap: 30px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permite quebra de linha */
+  padding: 0 10px; /* Espaço lateral */
 }
 
 .phone {
-  width: 110px;
+  width: 30vw;         /* Largura relativa à tela */
+  max-width: 140px;    /* Limite máximo */
+  min-width: 100px;    /* Limite mínimo */
   background: transparent;
   display: flex;
   justify-content: center;
@@ -64,7 +68,9 @@ body {
 }
 
 .phone.destaque {
-  width: 140px;
+  width: 40vw;         /* Destaque maior */
+  max-width: 200px;
+  min-width: 130px;
 }
 
 .phone img {
@@ -75,6 +81,20 @@ body {
 
 .phone:hover {
   transform: scale(1.05);
+}
+
+/* Ajustes para telas pequenas (celulares) */
+@media (max-width: 480px) {
+  .phones-showcase {
+    flex-direction: column;
+    align-items: center;
+  }
+  .phone, .phone.destaque {
+    width: 70vw;
+    max-width: none;
+    min-width: auto;
+    margin-bottom: 20px;
+  }
 }
 
 /* DOWNLOAD SECTION */
