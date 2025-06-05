@@ -1,0 +1,177 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F9E9CB;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: linear-gradient(180deg, #F9E9CB 0%, #ffffff 100%);
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  color: #5330AC;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #A18FB7;
+  margin-top: 10px;
+}
+
+/* PARALLAX SECTION */
+.parallax-section {
+  background-image: url('background-parallax.jpg'); /* Substitua com imagem desejada */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+}
+
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll;
+  }
+}
+
+.phones-showcase {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.phone {
+  width: 110px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.phone.destaque {
+  width: 140px;
+}
+
+.phone img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.phone:hover {
+  transform: scale(1.05);
+}
+
+/* DOWNLOAD SECTION */
+.downloads {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.downloads h2 {
+  color: #5330AC;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.store-btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: white;
+}
+
+.appstore {
+  background-color: #5330AC;
+}
+
+.appstore:hover {
+  background-color: #A18FB7;
+}
+
+.googleplay {
+  background-color: #F87F30;
+}
+
+.googleplay:hover {
+  background-color: #FFCC00;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 60px 10%;
+  background-color: #ffffff;
+}
+
+.feature {
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #F87F30;
+  font-weight: 600;
+}
+
+.feature p {
+  color: #5330AC;
+  font-size: 0.95rem;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #FFCC00;
+  color: #5330AC;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* FADE-IN EFFECT */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
